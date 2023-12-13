@@ -13,8 +13,8 @@
     <div class="cointainer">
         <div class="row">
             <div class="col-12 text-center fs-1">Tobolist</div>
-            <ul class="col-12 text-center pt-4" v-for="(item, index) in list" :key="index">
-                <li :class="item.done == true ? 'text-decoration-line-through' : ''">{{ item.text }}</li>
+            <ul class="col-12 d-flex justify-content-center pt-4" v-for="(item, index) in list" :key="index">
+                <li :class="item.done == true ? 'text-decoration-line-through' : ''">{{ item.text }} <button class="btn btn-danger" @click="removeItem"><i class="fa-solid fa-xmark"></i></button></li>
             </div>
         </div>
     </div>

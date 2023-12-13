@@ -23,8 +23,13 @@ createApp({
         {
             text: 'Tales of Symphonia',
             done: true,
-        }
+        },
        ]
       }
+    },
+    methods: {
+        removeItem(index) {
+            this.list.splice(index, 1)
     }
+}
 }).mount('#app')
