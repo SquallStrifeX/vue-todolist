@@ -14,7 +14,20 @@
         <div class="row">
             <div class="col-12 text-center fs-1">Tobolist</div>
             <ul class="col-12 d-flex justify-content-center pt-4" v-for="(item, index) in list" :key="index">
-                <li :class="item.done == true ? 'text-decoration-line-through' : ''">{{ item.text }} <button class="btn btn-danger" @click="removeItem"><i class="fa-solid fa-xmark"></i></button></li>
+                <li :class="item.done == true ? 'text-decoration-line-through' : ''">{{ item.text }} <button class="btn btn-danger" @click="removeItem(index)"><i class="fa-solid fa-xmark"></i></button></li>
+            </div>
+            <div class="col-12">
+                <form class="row g-3" @submit.prevent>
+        
+                    <div class="col-auto">
+                      <label for="inputPassword2" class="visually-hidden"></label>
+                      <input type="text" class="form-control" id="inputPassword2" placeholder="Gioco" v-model="newGame">
+                      {{ newGame }}
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-primary mb-3" @click="addGame">Inserisci nuovo gioco</button>
+                    </div>
+                  </form>
             </div>
         </div>
     </div>

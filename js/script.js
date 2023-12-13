@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
       return {
+        newGame: '',
         list: [
             {
             text: 'Final Fantasy VII',
@@ -30,6 +31,9 @@ createApp({
     methods: {
         removeItem(index) {
             this.list.splice(index, 1)
-    }
+    },
+        addGame(){
+            this.list.push({ text: this.newGame, done: false })
+        }
 }
 }).mount('#app')
