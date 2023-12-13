@@ -34,6 +34,10 @@ createApp({
     },
         addGame(){
             this.list.push({ text: this.newGame, done: false })
-        }
+        },
+        invertDone(index) {
+            // Inverti il valore di done per l'elemento nella lista
+            this.list[index].done = !this.list[index].done;
 }
+    }
 }).mount('#app')
