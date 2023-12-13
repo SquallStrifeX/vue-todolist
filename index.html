@@ -9,7 +9,17 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.cjs.js" integrity="sha512-WEjd7hnlSyXg/M6RtqmPMg8p/YPNg1vMEXCRboZ8eOucCrp7hc3u/fHjKLXCXVfDT/cVv93N4Fq27Ce4F3rBcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div id="app">
+    <div class="cointainer">
+        <div class="row">
+            <div class="col-12 text-center fs-1">Tobolist</div>
+            <ul class="col-12 text-center pt-4" v-for="(item, index) in list" :key="index">
+                <li :class="item.done == true ? 'text-decoration-line-through' : ''">{{ item.text }}</li>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
+</div>
 </body>
 </html>
