@@ -15,6 +15,7 @@
             <div class="col-12 text-center fs-1">Tobolist</div>
             <ul class="col-12 d-flex justify-content-center pt-4" v-for="(item, index) in list" :key="index">
                 <li :class="item.done == true ? 'text-decoration-line-through' : ''" @click="invertDone(index)" class="ciao">{{ item.text }} <button class="btn btn-danger" @click="removeItem(index)"><i class="fa-solid fa-xmark"></i></button></li>
+                <button class="btn btn-danger" @click="invertDone(index)"><i class="fa-bar fa-xmark"></i></button></li>
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <form class="row g-3" @submit.prevent>
